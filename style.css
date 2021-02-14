@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background: #2f2f2f;
+  color: #ddd;
+  font-family: 'Sora', sans-serif;
+}
+nav {
+  position: fixed;
+  width: -webkit-fill-available;
+  background: #eeeeee;
+  height: 75px;
+}
+nav ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0px 50px;
+  height: 100%;
+}
+nav ul li {
+  flex: 1;
+  display: flex;
+}
+nav ul li a {
+  color: #2b2b2b;
+  text-decoration: none;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+nav ul li a:hover {
+  background: #00000021;
+}
+.app {
+  padding-top: 95px;
+  text-align: center;
+}
+.name {
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 3px -3px 4px #787878;
+}
+.logo {
+  box-shadow: 0px 0px 20px 0px black;
+}
+.projectClick {
+  cursor: pointer;
+  color: #a4a4ff;
+}
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftcontrol {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 50px solid white;
+  cursor: pointer;
+}
+.rightcontrol {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 50px solid white;
+  cursor: pointer;
+}
+.disabled {
+  border-right-color: #ffffff90;
+  border-left-color: #ffffff90;
+  cursor: not-allowed;
+}
+
+/* Screen is small - probably a tablet */
+@media only screen and (max-width: 700px) {
+  body {
+
+  }
+}
