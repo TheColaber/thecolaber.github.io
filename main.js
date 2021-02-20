@@ -1,25 +1,27 @@
 window.vue = new Vue({
   el: "body",
   data: {
-    showProject: false,
-    projects: [],
-    projectIndex: null,
-    ready: false
+    projects: [
+      {
+        name: "ScratchAddons",
+        description: "A browser extension that makes Scratch 100 times better!",
+        link: "https://github.com/ScratchAddons/ScratchAddons"
+      },
+      {
+        name: "Text2HTML",
+        description: "Parces text and returns it! Done with pure JS to aviod using innerHTML and such.",
+        link: "https://github.com/TheColaber/Text2HTML"
+      }
+    ]
   },
   methods: {
-    switchProject: function (way) {
-      if (!event.target.classList.contains("disabled")) this.projectIndex += way;
-    },
-    logoEffect: function () {
-      console.log(event);
+    logoEffect() {
       let box = event.target.getBoundingClientRect();
       event.target.style.boxShadow = `${-(event.offsetX - box.width / 2)}px ${-(event.offsetY - box.height / 2)}px 20px 0px black`
     }
   },
   computed: {
-    getProjectUrl: function () {
-      return `https://turbowarp.org/${this.projects[this.projectIndex].id}/embed`;
-    }
+
   },
   components: {
     'navbar': {
@@ -35,10 +37,6 @@ window.vue = new Vue({
               url: "/projects.html"
             },
             {
-              text: "links",
-              url: "/links.html"
-            },
-            {
               text: "blog",
               url: "/blog.html"
             }
@@ -48,7 +46,7 @@ window.vue = new Vue({
       template: `
       <nav>
         <ul>
-          <li v-for="tab in navtabs">
+          <li v-for="tab of navtabs">
             <a :href="tab.url">{{ tab.text }}</a>
           </li>
         </ul>
@@ -56,8 +54,3 @@ window.vue = new Vue({
     }
   }
 });
-(async () => {
-  vue.projects = await (await fetch("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/users/TheColaber/projects/")).json()
-  vue.projectIndex = vue.projects.length - 1;
-  vue.ready = true;
-})();

@@ -33,6 +33,9 @@ nav ul li a {
 nav ul li a:hover {
   background: #00000021;
 }
+a {
+  color: #ddd;
+}
 .app {
   padding-top: 95px;
   text-align: center;
@@ -45,40 +48,25 @@ nav ul li a:hover {
 .logo {
   box-shadow: 0px 0px 20px 0px black;
 }
-.projectClick {
-  cursor: pointer;
-  color: #a4a4ff;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
-.leftcontrol {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 50px solid white;
-  cursor: pointer;
-}
-.rightcontrol {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-left: 50px solid white;
-  cursor: pointer;
-}
-.disabled {
-  border-right-color: #ffffff90;
-  border-left-color: #ffffff90;
-  cursor: not-allowed;
+
+tr:nth-child(even) {
+  background-color: #555;
 }
 
 /* Screen is small - probably a tablet */
 @media only screen and (max-width: 700px) {
-  body {
-
+  nav {
+    display: none;
   }
 }

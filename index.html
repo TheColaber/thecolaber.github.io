@@ -17,14 +17,6 @@
       <div>Hi! I'm TheColaber! You may know me from Scratch, GitHub, Discord, or YouTube... etheir way, this is my site!</div>
       <div>I like to work on things that are useful to me. Such as many addons I have made for scratch and turbowarp.</div>
       <div>Once in a while I make project for scratch, either dumb or my level of complexity.</div>
-      <div class="projectClick" @click="showProject = !showProject">You can click this text to see my lastest project on scratch.</div>
-      <div v-if="ready">
-        <div class="project" v-show="showProject">
-          <div class="leftcontrol" @click="switchProject(1)" :class="projectIndex + 1 == projects.length ? 'disabled' : ''" @click=""></div>
-          <iframe :src="getProjectUrl" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
-          <div class="rightcontrol" @click="switchProject(-1)" :class="projectIndex == 0 ? 'disabled' : ''" @click=""></div>
-        </div>
-      </div>
       <div>But usseulally I'll be out in GitHub, exploring the infinte repos of the world.</div>
       <div>I've worked on many projects which you can find in my projects section...</div>
       <div>Anyway, enough about me, go ahead and explore my site.</div>

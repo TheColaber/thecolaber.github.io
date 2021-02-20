@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Projects - TheColaber</title>
+    <script src="vue.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <navbar></navbar>
+    <div class="app">
+      {{navtabs}}
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+        <tr v-for="project of projects">
+          <th>{{ project.name }}</th>
+          <th>{{ project.description }}</th>
+          <th><a :href="project.link" target="_blank">{{ project.link }}</a></th>
+        </tr>
+        <!-- <tr>
+          <th>Text2HTML</th>
+          <th>Description</th>
+          <th><a href="https://github.com/TheColaber/Text2HTML">https://github.com/TheColaber/Text2HTML</a></th>
+        </tr> -->
+      </table>
+    </div>
+  </body>
+</html>
