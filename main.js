@@ -34,11 +34,11 @@ window.vue = new Vue({
             },
             {
               text: "projects",
-              url: "/projects.html"
+              url: "/projects"
             },
             {
               text: "blog",
-              url: "/blog.html"
+              url: "/blog"
             }
           ]
         };
