@@ -1,8 +1,22 @@
 ---
-layout: default
-title: Blog
 ---
-<h1>Latest Posts</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog - TheColaber</title>
+    <script src="vue.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <navbar></navbar>
+    <div class="app">
+      <img class="logo" src="logo.png" alt="logo" @mousemove="logoEffect()">
+      <div class="name">TheColaber</div>
+      <br>
+<h1>Posts</h1>
 
 <ul>
   {% for post in site.posts %}
@@ -12,3 +26,6 @@ title: Blog
     </li>
   {% endfor %}
 </ul>
+    </div>
+  </body>
+</html>
