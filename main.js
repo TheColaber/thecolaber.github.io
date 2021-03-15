@@ -11,6 +11,11 @@ window.vue = new Vue({
         name: "Text2HTML",
         description: "Parces text and returns it! Done with pure JS to aviod using innerHTML and such.",
         link: "https://github.com/TheColaber/Text2HTML"
+      },
+      {
+        name: "FlagClicked",
+        description: "Tutorials for scratchers by scratchers.",
+        link: "https://github.com/FlagClicked/FlagClicked"
       }
     ]
   },
